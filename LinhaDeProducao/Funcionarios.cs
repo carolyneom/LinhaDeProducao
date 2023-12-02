@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LinhaDeProducao
 {
@@ -21,11 +22,13 @@ namespace LinhaDeProducao
 
         private int nivel;
 
+        public bool logado = false;
+
         public DateTime data_cadastro;
 
         public void SetSenha(string senha)
         {
-            this.senha = BCrypt.Net.BCrypt.HashPassword(senha, BCrypt.Net.BCrypt.GenerateSalt());
+            this.senha = senha;
         }
 
         public string GetSenha()
@@ -42,6 +45,52 @@ namespace LinhaDeProducao
         {
             return this.nivel;
         }
+
+        public Funcionarios GetFuncionariosPorEmailESenha()
+        {
+
+            try
+            {
+
+                OpenConnection();
+
+                string query = "SELECT *FROM funcionarios WHERE email = '"+ this.email +"' AND senha = '"+ this.senha +"';";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+
+                        while (reader.Read())
+                        {
+                            this.id     = Convert.ToInt16(reader.GetString("id"));
+                            this.nome   = reader.GetString("nome");
+                            this.email  = reader.GetString("email");
+                            this.SetNivel(Convert.ToInt16(reader.GetString("id")));
+                          
+                            this.logado = true;
+                        }
+
+                    }
+
+                }
+
+                CloseConnection();
+
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message);
+            }
+
+
+            return this;
+
+        }
+         
+         
+
+        
 
         public List<Funcionarios> GetListaFuncionarios()
         {
@@ -96,7 +145,7 @@ namespace LinhaDeProducao
             try
             {
 
-                string query = "INSERT INTO `funcionarios` (`id_empresa`, `nome`, `email`, `senha` , `nivel `) VALUES (@id_empresa, @nome, @email, @senha, @nivel);";
+                string query = "INSERT INTO `funcionarios` (`id_empresa`, `nome`, `email`, `senha` , `nivel`) VALUES (@id_empresa, @nome, @email, @senha, @nivel);";
 
                 MySqlParameter[] param = new MySqlParameter[]
                 {
