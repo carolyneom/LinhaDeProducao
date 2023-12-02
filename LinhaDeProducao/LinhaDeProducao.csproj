@@ -121,6 +121,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setores.cs" />
+    <Compile Include="view\PaginaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PaginaClientes.Designer.cs">
+      <DependentUpon>PaginaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\PaginaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     </Compile>
     <Compile Include="view\PaginaPrincipal.Designer.cs">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\PaginaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PaginaProdutos.Designer.cs">
+      <DependentUpon>PaginaProdutos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -145,11 +157,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\PaginaClientes.resx">
+      <DependentUpon>PaginaClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\PaginaLogin.resx">
       <DependentUpon>PaginaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\PaginaProdutos.resx">
+      <DependentUpon>PaginaProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
