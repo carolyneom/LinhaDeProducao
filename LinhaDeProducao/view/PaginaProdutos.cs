@@ -47,7 +47,7 @@ namespace LinhaDeProducao.view
                     item.SubItems.Add(produto.nome);
                     item.SubItems.Add(produto.id_empresa);
                     listViewProdutos.Items.Add(item);
-
+                    
                 }
 
 

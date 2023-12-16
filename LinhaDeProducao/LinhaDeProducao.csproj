@@ -127,11 +127,35 @@
     <Compile Include="view\PaginaClientes.Designer.cs">
       <DependentUpon>PaginaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\PaginaEtapas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PaginaEtapas.Designer.cs">
+      <DependentUpon>PaginaEtapas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\PaginaFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PaginaFuncionarios.Designer.cs">
+      <DependentUpon>PaginaFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\PaginaLinhaDeProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PaginaLinhaDeProducao.Designer.cs">
+      <DependentUpon>PaginaLinhaDeProducao.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\PaginaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\PaginaLogin.Designer.cs">
       <DependentUpon>PaginaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\PaginaOrdemDeProducao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PaginaOrdemDeProducao.Designer.cs">
+      <DependentUpon>PaginaOrdemDeProducao.cs</DependentUpon>
     </Compile>
     <Compile Include="view\PaginaPrincipal.cs">
       <SubType>Form</SubType>
@@ -144,6 +168,12 @@
     </Compile>
     <Compile Include="view\PaginaProdutos.Designer.cs">
       <DependentUpon>PaginaProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\PaginaSetores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PaginaSetores.Designer.cs">
+      <DependentUpon>PaginaSetores.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -160,14 +190,29 @@
     <EmbeddedResource Include="view\PaginaClientes.resx">
       <DependentUpon>PaginaClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\PaginaEtapas.resx">
+      <DependentUpon>PaginaEtapas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\PaginaFuncionarios.resx">
+      <DependentUpon>PaginaFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\PaginaLinhaDeProducao.resx">
+      <DependentUpon>PaginaLinhaDeProducao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\PaginaLogin.resx">
       <DependentUpon>PaginaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\PaginaOrdemDeProducao.resx">
+      <DependentUpon>PaginaOrdemDeProducao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\PaginaProdutos.resx">
       <DependentUpon>PaginaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\PaginaSetores.resx">
+      <DependentUpon>PaginaSetores.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

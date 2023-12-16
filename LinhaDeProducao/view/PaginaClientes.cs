@@ -12,13 +12,26 @@ namespace LinhaDeProducao.view
 {
     public partial class PaginaClientes : Form
     {
+        private object comboBoxCliente;
+
         public PaginaClientes()
         {
             InitializeComponent();
 
+            labelName.Text = nome();
+
+
             try {
-            
+             
+                List<Clientes> listaClientes = new List<Clientes>();
+
                 Clientes clientes = new Clientes();
+
+                listaClientes = clientes.GetListaClientes();
+
+                comboBoxCliente.DataSource = listaClientes;
+                comboBoxCliente.DisplayMember = "nome";
+                comboBoxCliente.ValueMember = "id";
 
                 listViewClientes.Bounds = new Rectangle(new Point(15, 70), new Size(700, 500));
 
@@ -44,13 +57,13 @@ namespace LinhaDeProducao.view
                     item.SubItems.Add(cliente.nome);
                     item.SubItems.Add(cliente.email);
                     listViewClientes.Items.Add(item);
-
+                 
                 }
-
+             
             } catch (Exception ex) {
-            
+             
                 MessageBox.Show(ex.Message);
-            
+             
             }
 
         }
